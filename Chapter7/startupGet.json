@@ -6,7 +6,10 @@
       "method": "get"
     },
     "response": {
-      "text": "这是一个没有参数的get请求"
+      "text": "这是一个没有参数的get请求",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
     }
   },
   {

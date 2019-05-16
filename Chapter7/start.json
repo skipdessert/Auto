@@ -1,0 +1,22 @@
+[
+  {
+    "description":"带head的post",
+    "request":{
+      "uri":"/123",
+      "method":"post",
+      "headers":{
+        "content-type":"application/json"
+      },
+      "json":{
+        "name":"h",
+        "age":"1"
+      }
+    },
+    "response":{
+      "json":{
+        "h":"success",
+        "status":"0"
+      }
+    }
+  }
+]

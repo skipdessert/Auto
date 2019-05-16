@@ -1,0 +1,37 @@
+[
+  {
+    "description":"post带cookies的请求",
+    "request":{
+      "uri":"/post/cookies",
+      "method":"post",
+      "cookies":{
+        "login":"true"
+      },
+      "json":{
+        "name":"nihao",
+        "age":"18"
+      }
+    },
+    "response":{
+     "status":100,
+      "json":{
+        "nihao":"success",
+        "status":"1"
+      }
+    }
+  },
+  {
+    "description":"get带cookies请求",
+    "request":{
+      "uri":"/get/ww",
+      "method":"get",
+      "cookies":{
+        "password":"10"
+      }
+    },
+    "response":{
+      "status":200,
+      "text":"这就是结果"
+    }
+  }
+]
