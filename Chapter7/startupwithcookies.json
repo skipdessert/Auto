@@ -2,7 +2,7 @@
   {
     "description":"post带cookies的请求",
     "request":{
-      "uri":"/post/cookies",
+      "uri":"/post",
       "method":"post",
       "cookies":{
         "login":"true"
@@ -23,15 +23,33 @@
   {
     "description":"get带cookies请求",
     "request":{
-      "uri":"/get/ww",
+      "uri":"/ww",
       "method":"get",
       "cookies":{
-        "password":"10"
+        "login":"true"
       }
     },
     "response":{
-      "status":200,
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      },
       "text":"这就是结果"
+    }
+  },
+  {
+    "description": "这是能返回cookies的get请求",
+    "request":{
+      "uri":"/ss",
+      "method":"get"
+    },
+    "response":{
+      "cookies":{
+        "login":"true"
+      },
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      },
+      "text":"恭喜你获取了一个cookies"
     }
   }
 ]
