@@ -9,6 +9,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -44,7 +45,7 @@ public class MyCookiesFotPost {
             System.out.println("cookie name="+name+"  ;cookie value="+value);
         }
     }
-    @Test(dependsOnMethods = {"testGetCookies"})
+    @Test(dependsOnMethods = {"testGet"})
     public void testPostWithCookies() throws IOException {
         String uri=bundle.getString("post");
         String testurl=url+uri;
@@ -72,8 +73,9 @@ public class MyCookiesFotPost {
         result=EntityUtils.toString(response.getEntity(),"utf-8");
         System.out.println(result);
         //处理结果，判断是否符合预期
-
-
+        JSONObject resultjson=new JSONObject(result);
+        String success=(String) resultjson.get("nihao");
+        Assert.assertEquals("success",success);
 
     }
 }
