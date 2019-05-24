@@ -1,0 +1,15 @@
+server:
+  port:8880
+
+logging:
+  path:logs
+  file:mylog.log
+spring:
+  application:
+    name:mytest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url:
+    username:
+    password:
+    
